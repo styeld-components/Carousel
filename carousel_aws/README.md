@@ -29,7 +29,6 @@
 
 ```json
     {
-      "name": "String",
       "likeplace": [{
         "name": "String",
         "list": "String",
