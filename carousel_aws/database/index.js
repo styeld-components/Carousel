@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://172.17.0.3/carousel', {
+mongoose.connect('mongodb://localhost/carousel', {
   useNewUrlParser: true});
 
 const db = mongoose.connection;
@@ -8,4 +8,4 @@ db.once('open', function() {
     console.log("db connected");
 });
 
-  module.exports = db;
+module.exports = db;

@@ -7,7 +7,7 @@ module.exports = {
         res.send(data);
       })
       .catch((e) =>{
-        console.log("error in get request: "+ err)
+        console.log("error in get request: " + err)
       })
   },
   post: (req,res) =>{
@@ -35,6 +35,7 @@ module.exports = {
       res.sendStatus(404)
     })
   }
+
 
 }
 
