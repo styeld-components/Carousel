@@ -65,6 +65,20 @@
     }
 ```
 
+### Add new favorites list
+  * POST `/api/users/:userId`
+
+**Success Status Code:** `201`
+
+**Request Body**: Expects JSON with the following keys.
+
+```json
+    {
+      "listId": "Number",
+      "listName": "String"
+    }
+```
+
 ### Add listing to favorites
   * POST `/api/users/:userId`
 
@@ -74,8 +88,7 @@
 
 ```json
     {
-      "userId": "Number",
-      "listName": "String",
+      "listId": "Number",
       "placeId": "Number"
     }
 ```
@@ -83,24 +96,6 @@
 
 ### Update list name
   * PATCH `/api/users/:userId`
-
-**Path Parameters:**
-  * `placeId` listing id
-
-**Success Status Code:** `204`
-
-**Request Body**: Expects JSON with any of the following keys (include only keys to be updated)
-
-```json
-  {
-    "userId": "Number",
-    "listId": "Number",
-    "listName": "String"
-  }
-```
-
-### Delete place from favorites list
-  * DELETE `/api/users/:userId`
 
 **Path Parameters:**
   * `userId` listing id
@@ -111,8 +106,24 @@
 
 ```json
   {
-    "userId": "Number",
     "listId": "Number",
     "listName": "String"
+  }
+```
+
+### Delete place from favorites list
+  * DELETE `/api/users/:userId`
+
+**Path Parameters:**
+  * `userId` user id
+
+**Success Status Code:** `204`
+
+**Request Body**: Expects JSON with any of the following keys
+
+```json
+  {
+    "listId": "Number",
+    "placeId": "Number"
   }
 ```
