@@ -9,7 +9,7 @@ CREATE TABLE places (
   zipcode INT(10) NOT NULL,
   placeType VARCHAR(30) NOT NULL,
   numberBeds SMALLINT NOT NULL,
-  nightlyFee SMALLINT NOT NULL,
+  price SMALLINT NOT NULL,
   rating DECIMAL NOT NULL,
   totalReviews SMALLINT NOT NULL,
   picUrl VARCHAR(2000) NOT NULL,
