@@ -74,7 +74,6 @@
 
 ```json
     {
-      "listId": "Number",
       "listName": "String"
     }
 ```
