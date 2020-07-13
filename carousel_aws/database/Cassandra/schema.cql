@@ -7,7 +7,7 @@ CREATE KEYSPACE IF NOT EXISTS carousel
 USE carousel;
 
 CREATE TABLE places (
-  placeId uuid,
+  placeId int,
   title text,
   zipcode smallint,
   placeType text,
@@ -20,23 +20,14 @@ CREATE TABLE places (
   superHost boolean,
   hostPlus boolean,
   PRIMARY KEY ((zipcode, numberBeds), price)
-)
-
-/* GET user fav lists, POST room to fav list, DELETE room from fav list */
-CREATE TABLE favorites (
-  userId uuid,
-  username text,
-  listId uuid,
-  listName text,
-  placeId int,
-  PRIMARY KEY ((userId), listId, placeId)
 );
 
-/* POST new fav list  */
 CREATE TABLE lists (
-  userId uuid,
+  userId int,
   username text,
-  listId uuid,
-  list text,
+  listId int,
+  listName text,
+  favorites set<int>,
   PRIMARY KEY ((userId), listId)
 );
+

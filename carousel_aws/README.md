@@ -13,7 +13,7 @@
     {
       "zipcode": "Number",
       "numberBeds": "Number",
-      "nightlyFee": "Number"
+      "price": "Number"
     }
 
 ```
@@ -27,7 +27,7 @@
       "zipcode": "Number",
       "placeType": "String",
       "numberBeds": "Number",
-      "nightlyFee": "Number",
+      "price": "Number",
       "rating": "Number",
       "totalReviews": "Number",
       "picUrl": "String",
