@@ -1,1 +1,11 @@
 node_modules
+
+newrelic.js
+
+newrelic_agent.log
+
+sdc.pem
+
+database/Cassandra/csv
+
+database/PostgreSQL/csv

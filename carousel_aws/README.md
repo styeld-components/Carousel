@@ -1,7 +1,7 @@
 ## Server API
 
 ### Get place info
-  * GET `/api/places/`
+  * GET `/api/places/:zipcode/`
 
 **Path Parameters:**
 
@@ -11,7 +11,6 @@
 
 ```json
     {
-      "zipcode": "Number",
       "numberBeds": "Number",
       "price": "Number"
     }

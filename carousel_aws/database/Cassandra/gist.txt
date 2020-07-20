@@ -1,0 +1,29 @@
+ zipcode | numberbeds | price | hostplus | picurl                             | placeid  | placetype          | placeurl                 | rating | superhost | title                    | totalreviews
+---------+------------+-------+----------+------------------------------------+----------+--------------------+--------------------------+--------+-----------+--------------------------+--------------
+   16712 |     6 beds |    36 |     True | http://lorempixel.com/640/480/city | 17955266 | Entire guest suite | https://www.youtube.com/ |   4.93 |     False |             Lovely Cabin |            3
+   16712 |     6 beds |    40 |    False | http://lorempixel.com/640/480/city | 54067329 |       private room | https://www.youtube.com/ |   4.20 |     False |         Charming Cottage |          196
+   16712 |     6 beds |    41 |     True | http://lorempixel.com/640/480/city | 37612427 |       private room | https://www.youtube.com/ |   2.42 |     False |              Lovely Home |          798
+   16712 |     6 beds |    64 |     True | http://lorempixel.com/640/480/city | 50297070 |          apartment | https://www.youtube.com/ |   3.56 |     False |           Charming Cabin |          283
+   16712 |     6 beds |    69 |     True | http://lorempixel.com/640/480/city | 53608231 | Entire guest suite | https://www.youtube.com/ |   4.18 |     False |         Charming Cottage |          415
+   16712 |     6 beds |    89 |     True | http://lorempixel.com/640/480/city | 69735886 | Entire guest suite | https://www.youtube.com/ |   1.25 |      True |                Cozy Home |           75
+   16712 |     6 beds |   103 |     True | http://lorempixel.com/640/480/city | 42766962 |          Camper/RV | https://www.youtube.com/ |   4.09 |      True |             Private Room |          184
+   16712 |     6 beds |   104 |     True | http://lorempixel.com/640/480/city | 50421483 |       Entire house | https://www.youtube.com/ |   3.62 |     False |            Spacious Room |          541
+   16712 |     6 beds |   127 |     True | http://lorempixel.com/640/480/city | 31435303 | Entire condominium | https://www.youtube.com/ |   3.61 |      True |               Cozy Cabin |          774
+
+
+   carousel=# SELECT * FROM places WHERE zipcode = '16712' and numberbeds = '6 beds' limit 10;
+ zipcode | numberbeds | price | hostplus |               picurl               | placeid  |     placetype      |         placeurl         | rating | superhost |          title           | totalreviews
+---------+------------+-------+----------+------------------------------------+----------+--------------------+--------------------------+--------+-----------+--------------------------+--------------
+ 16712   | 6 beds     |   273 | f        | http://lorempixel.com/640/480/city |  5005041 | Entire townhouse   | https://www.youtube.com/ |   3.72 | f         | Lovely Cottage           |          633
+ 16712   | 6 beds     |   325 | t        | http://lorempixel.com/640/480/city |  9617942 | Entire guest suite | https://www.youtube.com/ |   3.05 | f         | Lovely Bed & Breakfast   |          785
+ 16712   | 6 beds     |   515 | t        | http://lorempixel.com/640/480/city |  6504877 | private room       | https://www.youtube.com/ |   3.30 | t         | Charming Bed & Breakfast |          469
+ 16712   | 6 beds     |   336 | t        | http://lorempixel.com/640/480/city |  6613839 | Entire house       | https://www.youtube.com/ |   1.70 | f         | Lovely Cottage           |          952
+ 16712   | 6 beds     |   597 | t        | http://lorempixel.com/640/480/city |  7056450 | apartment          | https://www.youtube.com/ |   2.89 | f         | Artistic Home            |          614
+ 16712   | 6 beds     |   452 | t        | http://lorempixel.com/640/480/city |  7086264 | private room       | https://www.youtube.com/ |   4.87 | t         | Spacious Room            |          832
+ 16712   | 6 beds     |   343 | t        | http://lorempixel.com/640/480/city |  8713050 | apartment          | https://www.youtube.com/ |   3.01 | t         | Spacious Treehouse       |          721
+ 16712   | 6 beds     |   571 | t        | http://lorempixel.com/640/480/city |  7730252 | Entire house       | https://www.youtube.com/ |   2.79 | f         | Lovely Home              |           90
+ 16712   | 6 beds     |   745 | t        | http://lorempixel.com/640/480/city |  8059242 | Entire guest suite | https://www.youtube.com/ |   2.49 | f         | Lovely Bed & Breakfast   |          521
+ 16712   | 6 beds     |   493 | f        | http://lorempixel.com/640/480/city | 10898111 | Entire guesthouse  | https://www.youtube.com/ |   3.54 | f         | Cozy Bed & Breakfast     |          821
+(10 rows)
+
+Time: 5830.244 ms (00:05.830)

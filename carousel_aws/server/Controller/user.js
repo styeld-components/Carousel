@@ -1,28 +1,27 @@
-const User = require('../../database/User.js')
+const User = require('../../database/PostgreSQL/index.js')
 
 module.exports = {
   get: (req,res) =>{
-    User.find()
-      .then((data) => {
-        res.send(data);
-      })
-      .catch((e) =>{
-        console.log("error in get request: " + err)
-      })
+    const q = `SELECT * FROM users INNER JOIN lists ON users.userId = lists.userId INNER JOIN favorites ON lists.listId = favorites.listId WHERE users.userid = ${req.param} limit 15`;
+
+    User.query(q, (err, data) => {
+      if (err) {
+        res.status(400).send(err);
+      } else {
+        res.status(200).send(data.rows);
+      }
+    })
   },
   post: (req,res) =>{
-    let userid = req.body._id;
-    let newlikeplace = {
-      "name": req.body.likeplace,
-      "list": req.body.list,
-      "like": req.body.like
-    }
-    User.findByIdAndUpdate(
-      { _id: userid},
-      { $push: {"likeplace": newlikeplace}}
-    )
-    .then(() => res.sendStatus(202))
-    .catch((e)=> res.sendStatus(404))
+    const q = `INSERT INTO lists(listId, listName, userId) VALUES (15000002, 'YO WHATUP', 18888);`;
+
+    User.query(q, (err, data) => {
+      if (err) {
+        res.status(400).send(err);
+      } else {
+        res.status(200).send('post success!');
+      }
+    })
   },
   update: (req,res) => {
     User.update(

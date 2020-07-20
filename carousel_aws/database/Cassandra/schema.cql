@@ -6,28 +6,31 @@ CREATE KEYSPACE IF NOT EXISTS carousel
 
 USE carousel;
 
-CREATE TABLE places (
-  placeId int,
-  title text,
-  zipcode smallint,
-  placeType text,
-  numberBeds smallint,
+CREATE TABLE places1 (
+  zipcode text,
+  numberBeds text,
   price smallint,
-  rating decimal,
-  totalReviews smallint,
-  picUrl text,
-  placeUrl text,
-  superHost boolean,
   hostPlus boolean,
+  picUrl text,
+  placeId int,
+  placeType text,
+  placeUrl text,
+  rating decimal,
+  superHost boolean,
+  title text,
+  totalReviews smallint,
   PRIMARY KEY ((zipcode, numberBeds), price)
 );
 
 CREATE TABLE lists (
   userId int,
-  username text,
   listId int,
-  listName text,
   favorites set<int>,
+  listName text,
+  username text,
   PRIMARY KEY ((userId), listId)
 );
 
+-- COPY carousel.places FROM '/Users/eleenyeh/carousel_aws2/carousel_aws/database/Cassandra/csv/places.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+
+-- COPY carousel.lists FROM '/Users/eleenyeh/carousel_aws2/carousel_aws/database/Cassandra/csv/lists.csv' WITH DELIMITER=',' AND HEADER=TRUE;
